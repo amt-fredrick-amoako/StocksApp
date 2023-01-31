@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using ModelValidationsExample.CustomValidators;
+using System.ComponentModel.DataAnnotations;
 
 namespace Entities
 {
@@ -14,10 +15,10 @@ namespace Entities
 
         public DateTime DateAndTimeOfOrder { get; set; }
 
-        [MaxLength(1000)]
+        [Range(1, 10000, ErrorMessage = "{0} should be set at ${1} minimum and ${2} maximum")]
         public int Quantity { get; set; }
 
-        [MaxLength(1000)]
+        [Range(1, 10000, ErrorMessage = "{0} should be set at ${1} minimum and ${2} maximum")]
         public double Price { get; set; }
 
     }
