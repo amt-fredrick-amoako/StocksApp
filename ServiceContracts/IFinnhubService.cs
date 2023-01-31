@@ -6,7 +6,5 @@
 
         Task<Dictionary<string, object>?> GetStockPriceQuote(string stockSymbol);
 
-
-
     }
 }
